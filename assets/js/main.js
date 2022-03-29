@@ -16,43 +16,40 @@ console.log(myEmail)
         // Se l'email è nella lista puoi accedere
         if (myEmail == email){
             const show_rollDice = document.getElementById("show_dice")
-            show_rollDice.classList.add("show")
             vero_falso = true
-            document.getElementById("message_email").innerHTML="La tua email è nella lista, puoi giocare a dadi"
+            document.getElementById("message_email").innerHTML="La tua email è nella lista!"
+        } // Fine condizione
 
-            //funzione per lanciare i dadi
-            document.getElementById("roll_dice").addEventListener("click", roll_dice);
+    } // fine ciclo for
+    if (vero_falso == false){
+        alert("La tua email non è sulla lista")
+    }
+}// fine funzione
 
-            function roll_dice(){
-                // tiro i dadi computer
-                let numeroRandomPc = Math.floor(Math.random()*6 +1)
-                // Scrivo quanto ha tirato il pc
-                document.getElementById("showdice_pc_result").innerHTML= "Il Computer ha lanciato" + " " + numeroRandomPc 
-                console.log(numeroRandomPc)
-                // tiro i dadi giocatore
-                let numeroRandomUser = Math.floor(Math.random()*6 +1)
-                // Scrivo quanto ho tirato
-                document.getElementById("showdice_user_result").innerHTML= "Ho lanciato" + " " + numeroRandomUser 
-                console.log(numeroRandomUser)
-                // Vincitore
-                if(numeroRandomPc > numeroRandomUser){
-                    document.getElementById("vincitore").innerHTML= "Hai perso"
-                } else if (numeroRandomPc < numeroRandomUser){
-                    document.getElementById("vincitore").innerHTML= "Hai vinto"
-                } else{
-                    document.getElementById("vincitore").innerHTML= "Pari"
-                }
-            }
-            // Fine funzione tira i dadi
-    } 
-// fine ciclo for
-} 
-// Fine funzione
 
-if (vero_falso == false){
-    alert("La tua email non è sulla lista, non puoi giocare a dadi")
+
+
+//funzione per lanciare i dadi
+document.getElementById("roll_dice").addEventListener("click", roll_dice);
+
+function roll_dice(){
+    // tiro i dadi computer
+    let numeroRandomPc = Math.floor(Math.random()*6 +1)
+    // Scrivo quanto ha tirato il pc
+    document.getElementById("showdice_pc_result").innerHTML= "Il Computer ha lanciato" + " " + numeroRandomPc 
+    console.log(numeroRandomPc)
+    // tiro i dadi giocatore
+    let numeroRandomUser = Math.floor(Math.random()*6 +1)
+    // Scrivo quanto ho tirato
+    document.getElementById("showdice_user_result").innerHTML= "Ho lanciato" + " " + numeroRandomUser 
+    console.log(numeroRandomUser)
+    // Vincitore
+    if(numeroRandomPc > numeroRandomUser){
+        document.getElementById("vincitore").innerHTML= "Hai perso"
+    } else if (numeroRandomPc < numeroRandomUser){
+        document.getElementById("vincitore").innerHTML= "Hai vinto"
+    } else{
+        document.getElementById("vincitore").innerHTML= "Pari"
+    }
 }
-
-}
-
-
+// Fine funzione tira i dadi

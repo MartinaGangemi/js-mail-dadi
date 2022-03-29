@@ -12,13 +12,5 @@ body{
 }
 
 .row_height{
-    height:150px ;
-}
-
-.hidden{
-    visibility: hidden;
-}
-
-.show{
-    visibility: visible;
+    height:200px ;
 }
