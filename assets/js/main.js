@@ -15,6 +15,8 @@ console.log(myEmail)
         console.log(email)
         // Se l'email è nella lista puoi accedere
         if (myEmail == email){
+            const show_rollDice = document.getElementById("show_dice")
+            show_rollDice.classList.add("show")
             vero_falso = true
             document.getElementById("message_email").innerHTML="La tua email è nella lista, puoi giocare a dadi"
 

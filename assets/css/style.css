@@ -2,3 +2,23 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #ccc;
+}
+
+.main_col{
+    height: 200px;
+}
+
+.row_height{
+    height:150px ;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.show{
+    visibility: visible;
+}
